@@ -1,0 +1,19 @@
+﻿@model EventEasePOE.Models.EventsM
+
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<h1>Event Details</h1>
+
+<div>
+    <strong>Name:</strong> @Model.EventName <br />
+    <strong>EventId:</strong> @Model.EventId <br />
+    <strong>Start Date:</strong> @Model.StartDate.ToShortDateString() <br />
+    <strong>End Date:</strong> @Model.EndDate.ToShortDateString() <br />
+    <strong>Image:</strong> <br />
+    <img src="@Model.ImageUrl" alt="Event Image" style="max-width:300px;" />
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.EventId" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back</a>

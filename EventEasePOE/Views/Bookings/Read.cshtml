@@ -1,0 +1,18 @@
+﻿@model EventEasePOE.Models.BookingsM
+@{
+    ViewData["Title"] = "Booking Details";
+}
+<h1>Booking Details</h1>
+
+<div>
+    <strong>Venue:</strong> @Model.Venue?.VenueName <br />
+    <strong>Event:</strong> @Model.Event?.EventName <br />
+    <strong>Booking Date:</strong> @Model.BookingDate.ToShortDateString() <br />
+    <strong>Start:</strong> @Model.StartDate <br />
+    <strong>End:</strong> @Model.EndDate <br />
+</div>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.BookingId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>
